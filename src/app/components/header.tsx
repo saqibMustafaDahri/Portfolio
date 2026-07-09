@@ -1,3 +1,4 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
 import FaceBook from "../Icons/facebook";
@@ -9,7 +10,7 @@ import ArrowDown from "../Icons/arrowdown";
 
 export default function Header() {
     return (
-        <section className="w-full pt-16 pb-8 bg-white overflow-hidden">
+        <section className="w-full md:pt-16 pb-8 bg-white overflow-hidden">
             <div className="max-w-7xl mx-auto grid grid-cols-12 items-start px-4 xl:px-0">
                 <div className="col-span-12 lg:col-span-11 text-center lg:text-left">
                     <h1 className="text-[40px] sm:text-[64px] md:text-[80px] font-bold text-black leading-[1.1] tracking-tight font-sans">
@@ -52,7 +53,7 @@ export default function Header() {
                         I help brands clarify their positioning, build stronger marketing systems, and create cohesive creative experiences across digital, content, ecommerce, and sales channels.
                     </p>
                     <Link
-                        href="/casestudies"
+                        href="/industrialbrand"
                         className="inline-flex items-center gap-3 bg-primary  text-white font-medium px-6 py-3.5 rounded-full "
                     >
                         <span>View Case Studies</span>
@@ -74,12 +75,15 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className="relative z-10 flex items-center justify-center lg:justify-start gap-2 mt-12 self-start select-none group cursor-pointer max-w-7xl mx-auto px-4 xl:px-0 mb-8 md:mb-0">
-                <span className="text-[18px] font-semibold tracking-wide text-black">Scroll</span>
-                <div className="w-[36px] h-[26px] rounded-full bg-black flex items-center justify-center text-white px-[9px] py-[4px]">
+            <button
+                onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+                className="relative z-10 flex items-center justify-center lg:justify-start gap-2 mt-12 self-start select-none group cursor-pointer max-w-7xl mx-auto px-4 xl:px-0 mb-8 md:mb-0 w-full"
+            >
+                <span className="text-[18px] font-semibold tracking-wide text-black group-hover:text-primary transition-colors duration-200">Scroll</span>
+                <div className="w-[36px] h-[26px] rounded-full bg-black flex items-center justify-center text-white px-[9px] py-[4px] group-hover:bg-primary transition-colors duration-200 ">
                     <ArrowDown />
                 </div>
-            </div>
+            </button>
         </section>
     );
 }

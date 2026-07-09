@@ -2,7 +2,7 @@ import Image from "next/image";
 import Details from "./details";
 export default function Marketing() {
     return (
-        <div className="max-w-7xl mx-auto  p-[32px]">
+        <div className="max-w-7xl mx-auto  md:p-[32px]">
             <div className="flex justify-center items-center height-[36px] w-[293px] gap-[10px]">
                 <div className="w-[133px] h-[36px] bg-primary flex justify-center items-center p-[10px] rounded-full ">
                     <p className="text-white text-[16px] leading-[160%]">Marketing</p>

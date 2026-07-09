@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ArrowDown from "../Icons/arrowdown";
 import ArrowRight from "../Icons/arrowright";
+import Link from "next/link";
 
 export default function GetInTouch() {
     return (
@@ -12,10 +13,12 @@ export default function GetInTouch() {
                         <h2 className="text-[16px] md:text-[20px] leading-[160%] mt-4 md:mt-0">Explore selected case studies showing how strategy, creative direction, and marketing execution come together to support business growth.
                         </h2>
                     </div>
-                    <div className="bg-primary h-[56px] w-[186px] flex items-center justify-center rounded-full gap-[12px]  cursor-pointer py-[16px] px-[24px] mx-auto md:mx-0">
-                        <p className="text-white text-[16px]">Get In Touch</p>
-                        <ArrowRight />
-                    </div>
+                    <Link href={"/contactus"}>
+                        <div className="bg-primary h-[56px] w-[186px] flex items-center justify-center rounded-full gap-[12px]  cursor-pointer py-[16px] px-[24px] mx-auto md:mx-0">
+                            <p className="text-white text-[16px]">Get In Touch</p>
+                            <ArrowRight />
+                        </div>
+                    </Link>
                 </div>
                 <div className="w-[80%] md:w-auto flex justify-center">
                     <Image src="/mobile.png" alt="box" width={386} height={500} className="mt-[5px] w-full h-auto object-contain max-h-[400px] md:max-h-full" />

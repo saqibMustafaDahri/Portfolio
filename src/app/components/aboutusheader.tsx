@@ -2,7 +2,7 @@ import Image from "next/image";
 import ArrowUpRight from "../Icons/arrowupright";
 export default function AboutUsHeader() {
     return (
-        <div className="max-w-7xl mx-auto md:h-screen flex flex-col md:grid md:gap-[100px] px-4 md:px-0 pt-8 md:pt-0">
+        <div className="max-w-7xl mx-auto md:h-screen flex flex-col md:grid md:gap-[100px] px-4 md:px-0 md:pt-8 md:pt-0">
             <div className="flex flex-col gap-6 mb-8 md:mb-0">
                 <h2 className="text-black text-[40px] md:text-[80px] font-semibold leading-[120%] -tracking-[4%] text-center md:text-left">We provides a range of services related to <span className="text-primary">digital marketing, online presence, & technology.</span></h2>
             </div>

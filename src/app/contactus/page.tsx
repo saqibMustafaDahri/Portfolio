@@ -6,7 +6,7 @@ export default function ContactUs() {
     return (
         <div>
             <Navbar />
-            <div className="px-4 py-8 md:p-[116px]">
+            <div className="px-4 md:py-8 md:p-[116px]">
                 <ContactUsHeader />
             </div>
             <Footer />

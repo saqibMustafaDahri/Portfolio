@@ -1,34 +1,64 @@
 'use client';
 import { usePathname } from "next/navigation";
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Call from "../Icons/call";
+
 interface NavItem {
   label: string;
   href: string;
+  dropdown?: { label: string; href: string }[];
 }
+
 export default function Navbar() {
   const [activeItem, setActiveItem] = useState<string>('Home');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileCaseOpen, setIsMobileCaseOpen] = useState(false);
+  const dropdownRef = useRef<HTMLLIElement>(null);
+
+  const caseStudies = [
+    { label: 'Industrial Brand Ecosystem', href: '/industrialbrand' },
+    { label: "Mary Ann's Chocolates", href: '/customerbrand' },
+    { label: 'Summit Point Roofing', href: '/brandstrategy' },
+    { label: 'Accelerate360', href: '/accelerate' },
+    { label: 'Creative Gallery', href: '/gallery' },
+  ];
 
   const navItems: NavItem[] = [
     { label: 'Home', href: '/' },
-    { label: 'Press', href: '/press' },
-    { label: 'Case Studies', href: '/casestudies' },
-    { label: 'About us', href: '/aboutpage' },
-    { label: 'Counselor', href: '/counselor' },
+    { label: 'About', href: '/aboutpage' },
+    {
+      label: 'Case Studies',
+      href: '/casestudies',
+      dropdown: caseStudies,
+    },
+    { label: 'Contact Us', href: '/contactus' },
   ];
+
   const pathname = usePathname();
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   return (
-    <nav className="w-full h-[80px] md:h-[128px] px-4 md:px-8 py-4 md:py-6 flex items-center justify-between relative">
+    <nav className="w-full h-[80px] md:h-[128px] px-4 md:px-8 py-4 md:py-6 flex items-center justify-between sticky top-0 z-50 bg-white">
       <Link href="/" className="flex flex-col items-center justify-center gap-1 select-none z-20">
         <div className="flex items-center">
           <Image src="logo.svg" alt="Logo" width={78} height={180} className="w-[50px] md:w-[78px] h-[80px]" />
         </div>
       </Link>
 
+      {/* Mobile hamburger */}
       <div className="md:hidden z-20 flex items-center">
         <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-black focus:outline-none">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,17 +66,76 @@ export default function Navbar() {
           </svg>
         </button>
       </div>
+
+      {/* Desktop Nav */}
       <ul className="hidden md:flex items-center gap-8 h-[48px]">
         {navItems.map((item) => {
-          const isActive = pathname === item.href;
+          const isActive = pathname === item.href || (item.dropdown && item.dropdown.some(d => pathname === d.href));
+
+          if (item.dropdown) {
+            return (
+              <li
+                key={item.label}
+                ref={dropdownRef}
+                className="relative flex items-center h-full"
+              // onMouseEnter={() => setIsDropdownOpen(true)}
+              // onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <button
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className={`flex items-center gap-1 text-[18px] font-semibold transition-colors duration-200 cursor-pointer ${isActive
+                    ? 'text-primary'
+                    : 'text-[#5C5E62] hover:text-[#A11B35]'
+                    }`}
+                >
+                  {item.label}
+                  {/* Chevron icon */}
+                  <svg
+                    className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+
+                {isActive && (
+                  <div className="absolute bottom-0 left-[-5px] right-[-5px] h-[2px] bg-primary" />
+                )}
+
+                {/* Dropdown Menu */}
+                {isDropdownOpen && (
+                  <div className="absolute top-full left-0 mt-2 w-[240px] bg-white rounded-xl shadow-2xl border border-[#F0F0F0] py-2 z-50 animate-fadeIn">
+                    {item.dropdown.map((dropItem) => {
+                      const isDropActive = pathname === dropItem.href;
+                      return (
+                        <Link
+                          key={dropItem.href}
+                          href={dropItem.href}
+                          onClick={() => setIsDropdownOpen(false)}
+                          className={`block px-5 py-3 text-[15px] font-medium transition-all duration-150 ${isDropActive
+                            ? 'text-primary bg-[#FFF5F7]'
+                            : 'text-[#3a3a3a] hover:text-primary hover:bg-[#FFF5F7]'
+                            }`}
+                        >
+                          {dropItem.label}
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
+              </li>
+            );
+          }
 
           return (
             <li key={item.label} className="relative flex items-center h-full">
               <Link
                 href={item.href}
                 className={`text-[18px] font-semibold transition-colors duration-200 ${isActive
-                  ? "text-primary"
-                  : "text-[#5C5E62] hover:text-[#A11B35]"
+                  ? 'text-primary'
+                  : 'text-[#5C5E62] hover:text-[#A11B35]'
                   }`}
               >
                 {item.label}
@@ -59,6 +148,7 @@ export default function Navbar() {
           );
         })}
       </ul>
+
       <Link
         href="/contactus"
         className="hidden md:flex items-center gap-2 bg-black text-white font-medium pl-5.5 pr-6 py-4 rounded-full "
@@ -67,11 +157,53 @@ export default function Navbar() {
         <span className="text-sm tracking-wide text-[16px]">Contact Us</span>
       </Link>
 
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-[80px] left-0 w-full bg-white flex flex-col items-center shadow-lg py-6 gap-6 z-10 md:hidden">
-          <ul className="flex flex-col items-center gap-4 w-full">
+        <div className="absolute top-[80px] left-0 w-full bg-white flex flex-col items-center shadow-lg py-6 gap-2 z-10 md:hidden">
+          <ul className="flex flex-col items-center gap-1 w-full">
             {navItems.map((item) => {
               const isActive = activeItem === item.label;
+
+              if (item.dropdown) {
+                return (
+                  <li key={item.label} className="flex flex-col items-center w-full">
+                    <button
+                      onClick={() => setIsMobileCaseOpen(!isMobileCaseOpen)}
+                      className={`flex items-center gap-1 py-3 text-[18px] font-semibold transition-colors duration-200 ${isActive ? 'text-primary' : 'text-[#5C5E62]'}`}
+                    >
+                      {item.label}
+                      <svg
+                        className={`w-4 h-4 transition-transform duration-200 ${isMobileCaseOpen ? 'rotate-180' : ''}`}
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+
+                    {isMobileCaseOpen && (
+                      <div className="flex flex-col items-center gap-1 pb-2">
+                        {item.dropdown.map((dropItem) => (
+                          <Link
+                            key={dropItem.href}
+                            href={dropItem.href}
+                            onClick={() => {
+                              setActiveItem(item.label);
+                              setIsMobileMenuOpen(false);
+                              setIsMobileCaseOpen(false);
+                            }}
+                            className="text-[15px] font-medium text-[#5C5E62] hover:text-primary py-2 px-4 transition-colors"
+                          >
+                            {dropItem.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </li>
+                );
+              }
+
               return (
                 <li key={item.label} className="flex items-center w-full justify-center">
                   <Link
@@ -80,7 +212,7 @@ export default function Navbar() {
                       setActiveItem(item.label);
                       setIsMobileMenuOpen(false);
                     }}
-                    className={`text-[18px] font-semibold transition-colors duration-200 ${isActive ? 'text-primary' : 'text-[#5C5E62] hover:text-[#A11B35]'}`}
+                    className={`text-[18px] font-semibold transition-colors duration-200 py-3 ${isActive ? 'text-primary' : 'text-[#5C5E62] hover:text-[#A11B35]'}`}
                   >
                     {item.label}
                   </Link>
@@ -91,7 +223,7 @@ export default function Navbar() {
           <Link
             href="/contactus"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="flex items-center gap-2 bg-black text-white font-medium px-6 py-3 rounded-full transition-all duration-200"
+            className="flex items-center gap-2 bg-black text-white font-medium px-6 py-3 rounded-full transition-all duration-200 mt-3"
           >
             <span className="text-sm tracking-wide">Contact Us</span>
           </Link>

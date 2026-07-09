@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import CaseStudyWork from "./casestudywork";
 
 export default function CaseStudy() {
+    const [activeTab, setActiveTab] = useState("Dribble");
+
     return (
         <div className="w-full bg-[#FAFAFA] px-4 md:px-[116px] py-[40px] md:py-[96px]">
             <div className="max-w-7xl mx-auto flex items-center justify-center py-8 md:py-16">
@@ -21,13 +26,27 @@ export default function CaseStudy() {
                 </div>
 
                 <div className="flex flex-wrap justify-center md:justify-between gap-4 md:gap-0 w-full md:w-[374px]">
-                    <div className="w-[100px] md:w-[106px] h-[32px] bg-primary rounded-full flex items-center justify-center"><p className="text-white text-[14px] md:text-[16px]">Dribble</p></div>
-                    <div className="w-[100px] md:w-[106px] h-[32px] bg-primary rounded-full flex items-center justify-center"><p className="text-white text-[14px] md:text-[16px]">Behance</p></div>
-                    <div className="w-[100px] md:w-[106px] h-[32px] bg-primary rounded-full flex items-center justify-center"><p className="text-white text-[14px] md:text-[16px]">Pinterest</p></div>
+                    <button 
+                        onClick={() => setActiveTab("Dribble")}
+                        className={`w-[100px] md:w-[106px] h-[32px] rounded-full flex items-center justify-center border-[1px] border-[#E5E5E5] transition-colors ${activeTab === "Dribble" ? "bg-primary text-white" : "bg-white text-black"}`}
+                    >
+                        <p className="text-[14px] md:text-[16px]">Dribble</p>
+                    </button>
+                    <button 
+                        onClick={() => setActiveTab("Behance")}
+                        className={`w-[100px] md:w-[106px] h-[32px] rounded-full flex items-center justify-center border-[1px] border-[#E5E5E5] transition-colors ${activeTab === "Behance" ? "bg-primary text-white" : "bg-white text-black"}`}
+                    >
+                        <p className="text-[14px] md:text-[16px]">Behance</p>
+                    </button>
+                    <button 
+                        onClick={() => setActiveTab("Pinterest")}
+                        className={`w-[100px] md:w-[106px] h-[32px] rounded-full flex items-center justify-center border-[1px] border-[#E5E5E5] transition-colors ${activeTab === "Pinterest" ? "bg-primary text-white" : "bg-white text-black"}`}
+                    >
+                        <p className="text-[14px] md:text-[16px]">Pinterest</p>
+                    </button>
                 </div>
             </div>
             <CaseStudyWork />
         </div>
     );
-
-}
+}
