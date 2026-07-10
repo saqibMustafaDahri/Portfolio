@@ -25,7 +25,7 @@ export default function About({
   imgSrcTwo,
 }: AboutSectionProps) {
   return (
-    <div className="bg-[#242424] relative h-auto pt-30 pb-16 md:pb-0  px-4 lg:px-0">
+    <div className="bg-[#242424] relative h-auto pt-8 md:pt-30 pb-4 md:pb-0  px-4 lg:px-0">
       <Image
         alt=""
         width={400}
@@ -33,9 +33,9 @@ export default function About({
         className="h-120 w-fit absolute right-0 "
         src={"/aboutUsIllu.svg"}
       />
-      <div className="max-w-7xl mx-auto h-auto flex flex-col lg:flex-row gap-16 mb-15 md:mb-[86.5px]">
+      <div className="max-w-7xl mx-auto h-auto flex flex-col lg:flex-row gap-16 mb-8 md:mb-15 md:mb-[86.5px]">
         <div className="">
-          <div className="bg-[#B31F3C66] px-3 w-fit flex items-center justify-center rounded-full border border-primary mx-auto lg:mx-0 mb-16">
+          <div className="bg-[#B31F3C66] px-3 w-fit flex items-center justify-center rounded-full border border-primary mx-auto lg:mx-0 mb-8 md:mb-16">
             <p className="text-white text-[20px]">{badgeText}</p>
           </div>
 
@@ -66,21 +66,21 @@ export default function About({
           </div>
         </div>
         <div className="w-full  text-center lg:text-left px-0 lg:px-0">
-          <h2 className="text-3xl md:text-4xl font-sora text-white leading-[120%] font-sora mb-4">
+          <h2 className="text-2xl md:text-4xl font-sora text-white leading-[120%] font-sora mb-4">
             {heading}
           </h2>
 
-          <h3 className="text-base md:text-2xl text-white leading-[144%] font-light">
+          <h3 className="text-sm md:text-2xl text-white leading-[144%] font-light">
             {description}
           </h3>
         </div>
       </div>
 
-      <div className="relative md:absolute left-0 right-0 flex items-center justify-center my-10 md:my-0 md:mb-17.5 px-0 md:px-0">
+      <div className="relative md:absolute left-0 right-0 flex items-center justify-center my-0 md:mb-17.5 px-0 md:px-0">
         <div className="h-px w-full bg-[#FFFFFF1A] hidden md:block"></div>
 
         <div className="relative md:absolute bg-[#1F1F1F] font-sora text-white border border-[#FFFFFF1A] px-4 md:px-8 py-2 md:py-0 md:h-11.5 flex items-center justify-center rounded-full shadow-lg z-10 w-full md:w-auto">
-          <p className="text-[14px] md:text-[18px] font-light tracking-wide text-center">
+          <p className="text-[12px] md:text-[18px] font-light tracking-wide text-center">
             We've Globally{" "}
             <span className="text-primary font-semibold">20K+</span> Customers
             in World-wide.
@@ -88,7 +88,7 @@ export default function About({
         </div>
       </div>
 
-      <div className="py-12 md:py-16 w-full overflow-hidden">
+      <div className="py-6 md:py-16 w-full overflow-hidden">
         <div
           className="flex"
           style={{ animation: `marquee 10s linear infinite` }}

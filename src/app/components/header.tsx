@@ -10,7 +10,7 @@ import ArrowDown from "../Icons/arrowdown";
 
 export default function Header() {
   return (
-    <section className="w-full relative md:pt-16 pb-8 bg-white overflow-hidden">
+    <section className="w-full relative md:pt-16 md:pb-8 bg-white overflow-hidden">
       <Image
         alt=""
         width={800}
@@ -18,7 +18,7 @@ export default function Header() {
         className="h-fit absolute left-0 top-0 "
         src={"/heroEllipse.png"}
       />
-      <div className="max-w-7xl  mx-auto grid grid-cols-12 items-start px-4 xl:px-0">
+      <div className="max-w-7xl  mx-auto grid grid-cols-12 items-start px-4 xl:px-0 relative">
         <div className="col-span-12 lg:col-span-11 text-center lg:text-left">
           <h1 className="text-[40px] sm:text-[64px] md:text-[80px] font-bold text-black leading-[1.1] tracking-tight font-sora">
             Strategic Brand <br className="hidden md:block" />
@@ -53,7 +53,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 items-end max-w-7xl mx-auto px-4 xl:px-0">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 mt-6 md:mt-16 items-end max-w-7xl mx-auto px-4 xl:px-0">
         <div className="flex flex-col items-center md:items-start text-center md:text-left gap-8 w-full md:w-[514px] lg:ml-[25%]">
           <p className="text-[#171717] text-[18px] md:text-[24px] sm:text-xl leading-relaxed font-400">
             I help brands clarify their positioning, build stronger marketing
@@ -87,7 +87,7 @@ export default function Header() {
         onClick={() =>
           window.scrollBy({ top: window.innerHeight, behavior: "smooth" })
         }
-        className="relative z-10 flex items-center justify-center lg:justify-start gap-2 mt-12 self-start select-none group cursor-pointer max-w-7xl mx-auto px-4 xl:px-0 mb-8 md:mb-0 w-full"
+        className="relative z-10 flex items-center justify-center lg:justify-start gap-2 mt-6 md:mt-12 self-start select-none group cursor-pointer max-w-7xl mx-auto px-4 xl:px-0 mb-4 md:mb-8 md:mb-0 w-full"
       >
         <span className="text-[18px] font-semibold tracking-wide text-black group-hover:text-primary transition-colors duration-200">
           Scroll

@@ -275,19 +275,19 @@ export default function CaseStudyWork() {
         ))}
       </div>
 
-      <div className="w-full h-auto md:h-47.5 flex items-center md:items-end justify-center py-10 md:py-0">
-        <Link
-          href="/industrialbrand"
-          className="w-full h-auto md:h-47.5 flex items-center md:items-end justify-center py-10 md:py-0"
-        >
-          <div className="bg-primary rounded-full w-25 h-25 md:w-30 md:h-30 flex flex-col justify-center items-center cursor-pointer hover:scale-105 transition-transform">
-            <ArrowUpRight />
-            <p className="text-white text-[14px] md:text-[16px] leading-3.75 w-14 text-center pt-1">
-              See All Work
-            </p>
-          </div>
-        </Link>
-      </div>
+      {/* <div className="w-full h-auto md:h-47.5 flex items-center md:items-end justify-center py-10 md:py-0"> */}
+      <Link
+        href="/industrialbrand"
+        className="w-full h-auto md:h-47.5 flex items-center md:items-end justify-center  md:py-0"
+      >
+        <div className="bg-primary rounded-full w-25 h-25 md:w-30 md:h-30 flex flex-col justify-center items-center cursor-pointer hover:scale-105 transition-transform">
+          <ArrowUpRight />
+          <p className="text-white text-[14px] md:text-[16px] leading-3.75 w-14 text-center pt-1">
+            See All Work
+          </p>
+        </div>
+      </Link>
+      {/* </div> */}
     </div>
   );
 }

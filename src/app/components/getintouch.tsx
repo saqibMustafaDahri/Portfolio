@@ -6,8 +6,8 @@ import Link from "next/link";
 export default function GetInTouch() {
   return (
     <div className="h-auto py-12 md:py-24 px-4 md:px-0">
-      <div className="max-w-7xl mx-auto grid grid-cols-3 bg-neutral-100 px-7.5 pt-7.5 md:pt-14 md:px-14  flex-col md:flex-row justify-between items-center md:items-stretch gap-10 md:gap-12 border border-[#D4D4D4] rounded-xl md:rounded-none">
-        <div className="w-full col-span-2 flex flex-col justify-between text-center pb-7.5 md:pb-14 md:text-left gap-8 md:gap-0">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-3 bg-neutral-100 px-7.5 pt-7.5 md:pt-14 md:px-14  flex-col md:flex-row justify-between items-center md:items-stretch gap-10 md:gap-12 border border-[#D4D4D4] rounded-xl md:rounded-none">
+        <div className="w-full md:col-span-2 flex flex-col justify-between text-center pb-7.5 md:pb-14 md:text-left gap-8 md:gap-0">
           <div className="space-y-3">
             <h1 className="font-bold text-3xl font-sora md:text-5xl leading-[130%]">
               Creative marketing for brands that{" "}
@@ -26,7 +26,7 @@ export default function GetInTouch() {
             </div>
           </Link>
         </div>
-        <div className="w-[80%] md:w-auto flex justify-center">
+        <div className="w-[100%] md:w-auto flex justify-center">
           <Image
             src="/mobile.png"
             alt="box"
