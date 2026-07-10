@@ -3,13 +3,11 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 
 export default function ContactUs() {
-    return (
-        <div>
-            <Navbar />
-            <div className="px-4 md:py-8 md:p-[116px]">
-                <ContactUsHeader />
-            </div>
-            <Footer />
-        </div>
-    )
+  return (
+    <div>
+      <Navbar />
+      <ContactUsHeader />
+      <Footer />
+    </div>
+  );
 }
