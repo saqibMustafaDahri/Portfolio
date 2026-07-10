@@ -142,7 +142,7 @@ export default function Navbar() {
 
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-62 bg-white rounded-xl shadow-2xl border border-[#F0F0F0] py-2 z-50 animate-fadeIn">
+                  <div className="absolute top-full left-0 mt-2 w-68 bg-white rounded-xl shadow-2xl border border-[#F0F0F0] py-2 z-50 animate-fadeIn">
                     {item.dropdown.map((dropItem) => {
                       const isDropActive = pathname === dropItem.href;
                       return (
