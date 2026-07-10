@@ -110,8 +110,6 @@ export default function Navbar() {
                 key={item.label}
                 ref={dropdownRef}
                 className="relative flex items-center h-full"
-                // onMouseEnter={() => setIsDropdownOpen(true)}
-                // onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <button
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -139,7 +137,7 @@ export default function Navbar() {
                 </button>
 
                 {isActive && (
-                  <div className="absolute bottom-0 -left-1.25 -right-1.25 h-0.5 bg-primary" />
+                  <div className="absolute -bottom-2 -left-1.25 -right-1.25 h-0.25 bg-primary" />
                 )}
 
                 {/* Dropdown Menu */}

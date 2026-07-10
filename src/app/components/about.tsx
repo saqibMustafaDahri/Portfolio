@@ -42,7 +42,7 @@ export default function About({
                   src="/absOne.png"
                   alt="Team member portrait short"
                   fill
-                  //   sizes="288px"
+                  sizes="288px"
                   //   className="object-cover object-center"
                   priority
                 />
@@ -53,7 +53,7 @@ export default function About({
                   src="/absTwo.png"
                   alt="Team member portrait tall"
                   fill
-                  //   sizes="288px"
+                  sizes="288px"
                   //   className="object-cover object-center"
                   priority
                 />
