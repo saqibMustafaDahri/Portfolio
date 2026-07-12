@@ -59,7 +59,7 @@ export default function OverViewSection() {
         </div>
         <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
         <div className="space-y-6">
-          <div className="flex items-center gap-[10px]">
+          <div className="flex items-center gap-2.5">
             <Business />
             <h1 className="text-3xl md:text-5xl font-sora font-semibold">
               Business <span className="text-primary">Challenge.</span>
@@ -142,7 +142,7 @@ export default function OverViewSection() {
                 <span className="text-primary"> Marketing Campaigns.</span>
               </h1>
             </div>
-            <p className="text-[20px]">
+            <p className="text-xl font-sora">
               Created campaigns focused on product positioning, promotional
               marketing, customer engagement, and competitive differentiation
               across multiple brands.
