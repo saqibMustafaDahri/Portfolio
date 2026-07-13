@@ -1,7 +1,9 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import Image from "next/image";
 import MaryAnnOverViewSection from "../components/maryannoverviewsection";
+import LightboxImage from "../components/lightboximage";
+
+const CUSTOMER_BRAND_IMAGES = ["/maryannhero.jpg"];
 
 export default function CustomerBrand() {
   return (
@@ -23,11 +25,13 @@ export default function CustomerBrand() {
         </div>
         <div className="flex flex-col md:flex-row ">
           <div className=" w-full ">
-            <Image
+            <LightboxImage
               src="/maryannhero.jpg"
               alt="box"
               width={1512}
               height={2064}
+              gallery={CUSTOMER_BRAND_IMAGES}
+              index={0}
               className="w-full h-full"
             />
           </div>

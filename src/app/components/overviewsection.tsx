@@ -1,10 +1,19 @@
 import Business from "../Icons/business";
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
-import Image from "next/image";
 import Target from "../Icons/target";
 import Idea from "../Icons/idea";
 import Product from "../Icons/product";
+import LightboxImage from "./lightboximage";
+
+const INDUSTRIAL_OVERVIEW_IMAGES = [
+  "/business.jpg",
+  "/strategy.jpg",
+  "/idea.jpg",
+  "/product.jpg",
+  "/sales.png",
+  "/arbasilver.png",
+];
 export default function OverViewSection() {
   const ROLES = [
     "Brand Strategy",
@@ -73,11 +82,13 @@ export default function OverViewSection() {
               supported sales, and maintained consistency across multiple brands
               and channels.
             </p>
-            <Image
+            <LightboxImage
               src="/business.jpg"
               alt="business challenge"
               width={1232}
               height={600}
+              gallery={INDUSTRIAL_OVERVIEW_IMAGES}
+              index={0}
               className="w-full h-auto"
             />
           </div>
@@ -85,11 +96,13 @@ export default function OverViewSection() {
 
         <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
         <div className="grid md:grid-cols-2 items-center gap-12">
-          <Image
+          <LightboxImage
             src="/strategy.jpg"
             alt="business challenge"
             width={1232}
             height={600}
+            gallery={INDUSTRIAL_OVERVIEW_IMAGES}
+            index={1}
             className="w-full h-auto"
           />
           <div className="space-y-6">
@@ -122,11 +135,13 @@ export default function OverViewSection() {
               through responsive design, product merchandising, content
               development, and digital marketing initiatives.
             </p>
-            <Image
+            <LightboxImage
               src="/idea.jpg"
               alt="business challenge"
               width={1232}
               height={600}
+              gallery={INDUSTRIAL_OVERVIEW_IMAGES}
+              index={2}
               className="w-full h-auto"
             />
           </div>
@@ -148,11 +163,13 @@ export default function OverViewSection() {
               across multiple brands.
             </p>
           </div>
-          <Image
+          <LightboxImage
             src="/product.jpg"
             alt="business challenge"
             width={1232}
             height={600}
+            gallery={INDUSTRIAL_OVERVIEW_IMAGES}
+            index={3}
             className="w-full h-auto"
           />
         </div>
@@ -160,11 +177,13 @@ export default function OverViewSection() {
         <div className="w-full h-px bg-linear-to-r from-[#A4A4A4] to-white my-14" />
         <div className="grid md:grid-cols-2 items-center justify-between gap-12 font-sora">
           <div className="grid gap-2.5 border pb-4 border-neutral-300">
-            <Image
+            <LightboxImage
               src="/sales.png"
               alt="business challenge"
               width={1232}
               height={600}
+              gallery={INDUSTRIAL_OVERVIEW_IMAGES}
+              index={4}
               className="w-full h-auto"
             />
             <div className="grid gap-3.5 px-5">
@@ -177,11 +196,13 @@ export default function OverViewSection() {
             </div>
           </div>
           <div className="grid gap-2.5 border pb-4 border-neutral-300">
-            <Image
+            <LightboxImage
               src="/arbasilver.png"
               alt="arba silver "
               width={1232}
               height={600}
+              gallery={INDUSTRIAL_OVERVIEW_IMAGES}
+              index={5}
               className="w-full h-auto"
             />
             <div className="grid gap-3.5 px-5 ">

@@ -1,8 +1,19 @@
 import Business from "../Icons/business";
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
-import Image from "next/image";
 import Target from "../Icons/target";
+import LightboxImage from "./lightboximage";
+
+const MARYANN_IMAGES = [
+  "/maryann01.png",
+  "/maryann00.png",
+  "/scope01.jpg",
+  "/scope2.jpg",
+  "/scope3.jpg",
+  "/scope04.jpg",
+  "/scope5.png",
+  "/scope6.jpg",
+];
 export default function MaryAnnOverViewSection() {
   const ROLES = [
     "Brand Development",
@@ -75,21 +86,25 @@ export default function MaryAnnOverViewSection() {
           <div className="grid md:grid-cols-6 gap-6 md:gap-10.5">
             <div className="w-full md:col-span-4 border border-neutral-300">
               <div>
-                <Image
+                <LightboxImage
                   src="/maryann01.png"
                   alt="packaging"
                   width={4000}
                   height={4000}
+                  gallery={MARYANN_IMAGES}
+                  index={0}
                   className="w-full h-full"
                 />
               </div>
             </div>
             <div className="md:col-span-2 border border-neutral-300">
-              <Image
+              <LightboxImage
                 src="/maryann00.png"
                 alt="packaging"
                 width={4000}
                 height={400}
+                gallery={MARYANN_IMAGES}
+                index={1}
                 className="w-full h-full"
               />
             </div>
@@ -113,59 +128,71 @@ export default function MaryAnnOverViewSection() {
           </div>
           <div className="space-y-10">
             <div className="border border-neutral-300">
-              <Image
+              <LightboxImage
                 src="/scope01.jpg"
                 alt="packaging"
                 width={640}
                 height={448}
+                gallery={MARYANN_IMAGES}
+                index={2}
                 className="w-full h-auto"
               />
             </div>
             <div className="flex flex-col md:flex-row justify-between gap-10.5">
               <div className="border border-neutral-300 w-full">
-                <Image
+                <LightboxImage
                   src="/scope2.jpg"
                   alt="packaging"
                   width={640}
                   height={448}
+                  gallery={MARYANN_IMAGES}
+                  index={3}
                   className="w-full h-auto"
                 />
               </div>
               <div className="border border-neutral-300 w-full">
-                <Image
+                <LightboxImage
                   src="/scope3.jpg"
                   alt="packaging"
                   width={640}
                   height={448}
+                  gallery={MARYANN_IMAGES}
+                  index={4}
                   className="w-full h-auto"
                 />
               </div>
             </div>
             <div className="border border-neutral-300">
-              <Image
+              <LightboxImage
                 src="/scope04.jpg"
                 alt="packaging"
                 width={640}
                 height={448}
+                gallery={MARYANN_IMAGES}
+                index={5}
                 className="w-full h-auto"
               />
             </div>
             <div className="flex flex-col md:flex-row justify-between gap-10.5">
               <div className="border border-neutral-300 w-full">
-                <Image
+                <LightboxImage
                   src="/scope5.png"
                   alt="packaging"
                   width={640}
                   height={448}
+                  gallery={MARYANN_IMAGES}
+                  index={6}
                   className="w-full h-auto"
                 />
               </div>
               <div className="border border-neutral-300 w-full">
-                <Image
+                <LightboxImage
                   src="/scope6.jpg"
                   alt="packaging"
                   width={640}
                   height={448}
+                  gallery={MARYANN_IMAGES}
+                  index={7}
                   className="w-full h-auto"
                 />
               </div>

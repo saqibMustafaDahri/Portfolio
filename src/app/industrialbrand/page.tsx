@@ -1,7 +1,15 @@
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
-import Image from "next/image";
 import OverViewSection from "../components/overviewsection";
+import LightboxImage from "../components/lightboximage";
+
+const INDUSTRIAL_IMAGES = [
+  "/industrial1.png",
+  "/global.png",
+  "/conical2.png",
+  "/abrasives.png",
+  "/elite.png",
+];
 
 export default function IndustrialBrand() {
   return (
@@ -23,42 +31,52 @@ export default function IndustrialBrand() {
         </div>
         <div className="flex flex-col md:flex-row ">
           <div className=" w-full ">
-            <Image
+            <LightboxImage
               src="/industrial1.png"
               alt="box"
               width={1512}
               height={2064}
+              gallery={INDUSTRIAL_IMAGES}
+              index={0}
               className="w-full h-full"
             />
           </div>
         </div>
         <div className="w-full grid grid-cols-4 gap-4 mt-6">
-          <Image
+          <LightboxImage
             src="/global.png"
             alt="Global"
             width={292}
             height={116}
+            gallery={INDUSTRIAL_IMAGES}
+            index={1}
             className="h-fit max-h-29 border object-cover border-neutral-300"
           />
-          <Image
+          <LightboxImage
             src="/conical2.png"
             alt="Conical"
             width={292}
             height={116}
+            gallery={INDUSTRIAL_IMAGES}
+            index={2}
             className="h-fit max-h-29 border object-cover border-neutral-300"
           />
-          <Image
+          <LightboxImage
             src="/abrasives.png"
             alt="Abrasives"
             width={292}
             height={116}
+            gallery={INDUSTRIAL_IMAGES}
+            index={3}
             className="h-fit max-h-29 border object-cover border-neutral-300"
           />
-          <Image
+          <LightboxImage
             src="/elite.png"
             alt="Elite"
             width={292}
             height={116}
+            gallery={INDUSTRIAL_IMAGES}
+            index={4}
             className="h-fit max-h-29 border object-cover border-neutral-300"
           />
         </div>

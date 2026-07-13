@@ -1,6 +1,29 @@
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
-import Image from "next/image";
+import LightboxImage from "./lightboximage";
+
+const GALLERY_IMAGES = [
+  "/gallery/gallery1.png",
+  "/gallery/gallery2.png",
+  "/gallery/gallery3.png",
+  "/gallery/gallery4.png",
+  "/gallery/gallery5.png",
+  "/gallery/gallery6.png",
+  "/gallery/gallery7.jpg",
+  "/gallery/gallery8.jpg",
+  "/gallery/gallery9.jpg",
+  "/gallery/gallery10.png",
+  "/gallery/gallery11.png",
+  "/gallery/gallery12.1.png",
+  "/gallery/gallery13.png",
+  "/gallery/gallery14.png",
+  "/gallery/gallery15.png",
+  "/gallery/gallery16.png",
+  "/gallery/gallery17.png",
+  "/gallery/gallery18.jpg",
+  "/gallery/gallery19.png",
+  "/gallery/gallery20.png",
+];
 
 export default function GallerySection() {
   const ROLES = [
@@ -63,27 +86,33 @@ export default function GallerySection() {
 
           <div className="grid gap-[42px]">
             <div className="">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery1.png"
                 alt="box"
                 width={1512}
                 height={600}
+                gallery={GALLERY_IMAGES}
+                index={0}
                 className="w-full border border-[#D4D4D4]"
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery2.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={1}
                 className="w-full border border-[#D4D4D4]"
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery3.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={2}
                 className="w-full border border-[#D4D4D4]"
               />
             </div>
@@ -101,59 +130,73 @@ export default function GallerySection() {
           </div>
           <div className="grid gap-[42px]">
             <div className="">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery4.png"
                 alt="box"
                 width={1512}
                 height={600}
+                gallery={GALLERY_IMAGES}
+                index={3}
                 className="w-full border border-[#D4D4D4]"
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery5.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={4}
                 className="w-full border border-[#D4D4D4]"
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery6.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={5}
                 className="w-full border border-[#D4D4D4]"
               />
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery7.jpg"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={6}
                 className="w-full border border-[#D4D4D4]"
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery8.jpg"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={7}
                 className="w-full border border-[#D4D4D4]"
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery9.jpg"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={8}
                 className="w-full border border-[#D4D4D4]"
               />
             </div>
             <div className="">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery10.png"
                 alt="box"
                 width={1512}
                 height={600}
+                gallery={GALLERY_IMAGES}
+                index={9}
                 className="w-full border border-[#D4D4D4]"
               />
             </div>
@@ -170,46 +213,58 @@ export default function GallerySection() {
           </div>
           <div className="grid gap-[42px] ">
             <div className="border-[1px] border-[#D4D4D4]">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery11.png"
                 alt="box"
                 width={1512}
                 className="p-4"
                 height={600}
+                gallery={GALLERY_IMAGES}
+                index={10}
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery12.1.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={11}
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery13.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={12}
               />
             </div>
             <div className="grid md:grid-cols-3 gap-8">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery14.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={13}
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery15.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={14}
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery16.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={15}
               />
             </div>
           </div>
@@ -226,11 +281,13 @@ export default function GallerySection() {
           </div>
           <div className="grid gap-[42px] ">
             <div className="">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery17.png"
                 alt="box"
                 width={1512}
                 height={600}
+                gallery={GALLERY_IMAGES}
+                index={16}
                 // className="w-full h-[200px] md:h-[600px]"
               />
             </div>
@@ -248,25 +305,31 @@ export default function GallerySection() {
 
           <div className="grid gap-[42px]">
             <div className="border-[1px] border-[#D4D4D4]">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery18.jpg"
                 alt="box"
                 width={1512}
                 height={600}
+                gallery={GALLERY_IMAGES}
+                index={17}
               />
             </div>
             <div className="grid md:grid-cols-2 gap-8">
-              <Image
+              <LightboxImage
                 src="/gallery/gallery19.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={18}
               />
-              <Image
+              <LightboxImage
                 src="/gallery/gallery20.png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={GALLERY_IMAGES}
+                index={19}
               />
             </div>
           </div>

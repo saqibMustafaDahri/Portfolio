@@ -1,11 +1,32 @@
 import OverView from "../Icons/overview";
 import Setting from "../Icons/setting";
-import Image from "next/image";
 import Target from "../Icons/target";
 import Laptop from "../Icons/laptop";
 import Sales from "../Icons/sales";
 import Mic from "../Icons/mic";
 import Sparcles from "../Icons/sparkles";
+import LightboxImage from "./lightboximage";
+
+const BRAND_STRATEGY_IMAGES = [
+  "/brandstrategy/image.png",
+  "/brandstrategy/image (1).png",
+  "/brandstrategy/image (2).png",
+  "/brandstrategy/image (3).png",
+  "/brandstrategy/image (4).png",
+  "/brandstrategy/image (5).png",
+  "/brandstrategy/image (6).png",
+  "/brandstrategy/image (7).png",
+  "/brandstrategy/image (8).png",
+  "/brandstrategy/image (9).png",
+  "/brandstrategy/image (10).png",
+  "/brandstrategy/image (11).png",
+  "/brandstrategy/image (12).png",
+  "/brandstrategy/image (13).png",
+  "/brandstrategy/image (14).png",
+  "/brandstrategy/image (15).png",
+  "/brandstrategy/image (16).png",
+  "/brandstrategy/image (17).png",
+];
 export default function BrandStrategySection() {
   const ROLES = [
     "Brand Strategy",
@@ -76,55 +97,69 @@ export default function BrandStrategySection() {
             </h1>
           </div>
           <div className="grid gap-10.5">
-            <div className="">
-              <Image
+            <div className="w-full">
+              <LightboxImage
                 src="/brandstrategy/image.png"
                 alt="box"
                 width={1512}
                 height={600}
-                className="w-full "
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={0}
+                className="w-full! "
               />
             </div>
             <div className=" grid md:grid-cols-2 gap-10.5">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (1).png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={1}
               />
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (2).png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={2}
               />
             </div>
             <div className=" grid md:grid-cols-3 gap-8.5">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (3).png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={3}
               />
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (4).png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={4}
               />
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (5).png"
                 alt="box"
                 width={1512}
                 height={2064}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={5}
               />
             </div>
             <div className="">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (6).png"
                 alt="box"
                 width={1512}
                 height={600}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={6}
               />
             </div>
           </div>
@@ -140,26 +175,32 @@ export default function BrandStrategySection() {
           </div>
           <div className="grid md:grid-cols-3 items-stretch gap-5 md:gap-8">
             <div className="">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (7).png"
                 alt="box"
                 width={651}
                 height={842}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={7}
                 // className="w-full h-fit"
               />
             </div>
-            <Image
+            <LightboxImage
               src="/brandstrategy/image (8).png"
               alt="box"
               width={651}
               height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={8}
               className="object-cover"
             />
-            <Image
+            <LightboxImage
               src="/brandstrategy/image (9).png"
               alt="box"
               width={651}
               height={400}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={9}
               className="object-cover"
             />
           </div>
@@ -176,54 +217,68 @@ export default function BrandStrategySection() {
           </div>
           <div className="space-y-8">
             <div className="w-full">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (10).png"
                 alt="box"
                 width={651}
                 height={842}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={10}
                 className="w-full h-full"
                 // className="w-full md:h-[600px] object-cover object-top border-[1px] border-[#D4D4D4]"
               />
             </div>
             <div className=" grid md:grid-cols-2 gap-8">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (11).png"
                 alt="box"
                 width={651}
                 height={400}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={11}
               />
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (12).png"
                 alt="box"
                 width={651}
                 height={400}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={12}
               />
 
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (13).png"
                 alt="box"
                 width={651}
                 height={400}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={13}
               />
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (14).png"
                 alt="box"
                 width={651}
                 height={400}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={14}
               />
             </div>
             <div className=" grid md:grid-cols-2 gap-8">
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (15).png"
                 alt="box"
                 width={651}
                 height={400}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={15}
               />
-              <Image
+              <LightboxImage
                 src="/brandstrategy/image (16).png"
                 alt="box"
                 width={651}
                 height={400}
+                gallery={BRAND_STRATEGY_IMAGES}
+                index={16}
               />
             </div>
           </div>
@@ -239,11 +294,13 @@ export default function BrandStrategySection() {
             </h1>
           </div>
           <div className="w-full">
-            <Image
+            <LightboxImage
               src="/brandstrategy/image (17).png"
               alt="box"
               width={651}
               height={842}
+              gallery={BRAND_STRATEGY_IMAGES}
+              index={17}
               className="w-full"
             />
           </div>
