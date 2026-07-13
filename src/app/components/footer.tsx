@@ -1,6 +1,5 @@
 import Image from "next/image";
 import FooterNav from "./footernav";
-import MailArrow from "../Icons/mailarrow";
 export default function Footer() {
   return (
     <div className="h-auto w-full bg-[url('/footerBg.png')] bg-cover bg-center pt-12 md:pt-24 pb-12 md:pb-8 grid gap-9.5 px-4 lg:px-0">
@@ -19,25 +18,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="text-center md:text-start space-y-3">
-          <label className="font-medium text-xl text-white uppercase inline-block mb-b">
-            Subscribe
-          </label>
-          <div className="w-full sm:w-92  pl-6 pr-2 pt-2 pb-2 flex items-center justify-between gap-4.5 rounded-[99px] border border-[#FFFFFF33] bg-[#FFFFFF29] backdrop-blur-[7px] transition-all duration-300 focus-within:border-primary/80">
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="w-full bg-transparent border-none outline-none text-white font-['Poppins'] font-medium text-[18px] placeholder-[#FFFFFF99] placeholder:font-normal"
-            />
-            <button
-              type="submit"
-              aria-label="Submit Email Address"
-              className="w-9 h-9 bg-primary shrink-0 flex items-center justify-center rounded-full text-white shadow-md transition-transform active:scale-95"
-            >
-              <MailArrow />
-            </button>
-          </div>
-        </div>
+       
       </div>
       <div className="  grid gap-10.5">
         <div>

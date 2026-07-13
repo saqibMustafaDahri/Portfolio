@@ -30,7 +30,7 @@ export default function Header() {
         </div>
 
         <div className="col-span-12 lg:col-span-1 flex flex-row lg:flex-col items-center justify-center lg:justify-self-end gap-5 pt-8 lg:pt-4">
-          <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
+          {/* <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
             <Link href="#">
               <FaceBook fill="currentColor" />
             </Link>
@@ -39,17 +39,17 @@ export default function Header() {
             <Link href="#">
               <Instagram fill="currentColor" />
             </Link>
-          </div>
+          </div> */}
           <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
             <Link href="#">
               <LinkedIn fill="currentColor" />
             </Link>
           </div>
-          <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
+          {/* <div className="hover:opacity-80 transition-opacity text-black hover:text-white w-10.5 h-10.5 bg-neutral-100 hover:bg-black flex items-center justify-center rounded-full border-[#E5E5E5] border-[1.17px]">
             <Link href="#">
               <BE fill="currentColor" />
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
 

@@ -185,7 +185,7 @@ export default function ContactUsForm() {
             name="fullName"
             value={formData.fullName}
             onChange={handleChange}
-            placeholder="Jane Cooper"
+            placeholder="Your name"
             className={`border-b-[2px] w-full outline-none py-1 ${errors.fullName ? "border-red-500" : "border-black"}`}
           />
           {errors.fullName && (

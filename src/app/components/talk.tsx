@@ -11,7 +11,7 @@ export default function Talk() {
       <div className="w-full md:w-[60%] flex flex-col gap-7.5 md:gap-12">
         <div className="text-center md:text-left">
           <p className="text-[50px] font-sora md:text-[100px] font-bold leading-none">
-            Let's <span className="text-primary font-normal">TALK</span>
+            Let&apos;s <span className="text-primary font-normal">TALK</span>
           </p>
         </div>
         <div className="md:ml-[35%] text-center md:text-left">
@@ -29,7 +29,7 @@ export default function Talk() {
             <LongArrow />
           </div>
           <div className="flex gap-4">
-            <Link
+            {/* <Link
               href={"/"}
               className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
             >
@@ -40,19 +40,19 @@ export default function Talk() {
               className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
             >
               <Instagram fill="currentColor" />
-            </Link>
+            </Link> */}
             <Link
               href={"/"}
               className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
             >
               <LinkedIn fill="currentColor" />
             </Link>
-            <Link
+            {/* <Link
               href={"/"}
               className="w-10.5 h-10.5 bg-white border hover:text-white hover:bg-black cursor-pointer text-black border-neutral-200 rounded-full flex justify-center items-center"
             >
               <BE fill="currentColor" />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

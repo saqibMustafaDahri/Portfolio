@@ -81,15 +81,15 @@ export default function About({
 
         <div className="relative md:absolute bg-[#1F1F1F] font-sora text-white border border-[#FFFFFF1A] px-4 md:px-8 py-2 md:py-0 md:h-11.5 flex items-center justify-center rounded-full shadow-lg z-10 w-full md:w-auto">
           <p className="text-[12px] md:text-[18px] font-light tracking-wide text-center">
-            We've Globally{" "}
+            We&apos;ve Globally{" "}
             <span className="text-primary font-semibold">20K+</span> Customers
             in World-wide.
           </p>
         </div>
       </div>
 
-      <div className="py-6 md:py-16 w-full overflow-hidden">
-        <div
+      <div className=" md:pt-16 w-full overflow-hidden">
+        {/* <div
           className="flex"
           style={{ animation: `marquee 10s linear infinite` }}
         >
@@ -103,7 +103,7 @@ export default function About({
               style={{ marginLeft: "32px", marginRight: "32px", flexShrink: 0 }}
             />
           ))}
-        </div>
+        </div> */}
 
         <style>{`
     @keyframes marquee {

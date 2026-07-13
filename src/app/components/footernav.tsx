@@ -35,7 +35,7 @@ export default function FooterNav() {
         </div>
 
         <div className="flex flex-row flex-wrap justify-center items-start gap-3">
-          <Link
+          {/* <Link
             href="#"
             className="w-10.5 cursor-pointer h-10.5 flex items-center justify-center bg-white/16 border border-white/16 rounded-full text-white hover:bg-white/30 "
           >
@@ -47,7 +47,7 @@ export default function FooterNav() {
             className="w-10.5 cursor-pointer h-10.5 flex items-center justify-center bg-white/16 border border-white/16 rounded-full text-white hover:bg-white/30 "
           >
             <Instagram fill="currentColor" />
-          </Link>
+          </Link> */}
 
           <Link
             href="#"
@@ -56,12 +56,12 @@ export default function FooterNav() {
             <LinkedIn fill="currentColor" />
           </Link>
 
-          <Link
+          {/* <Link
             href="#"
             className="w-10.5 cursor-pointer h-10.5 flex items-center justify-center bg-white/16 border border-white/16 rounded-full text-white hover:bg-white/30 "
           >
             <BE fill="currentColor" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </nav>
